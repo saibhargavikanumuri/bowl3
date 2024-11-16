@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic-Bowl</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Font Awesome CSS for fa-solid icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Font family -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+ <style>
+    * { 
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      position: relative;
+      display: flex;
+      background-image: url("Aarganic-bowl-bg2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+    }
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1; 
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    .logo {
+      margin-top: 7rem;
+      margin-bottom: 3.5rem;
+    }
+    .logo img {
+     width: 200px;
+     height: 200px;
+     position:relative;
+     border-radius: 20%;
+     padding: 10px;
+     background-color: #0DA37C;
+     box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.5); /* Gold glow */
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+   .logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 1), 0 0 80px rgba(255, 215, 0, 0.8); /* Enhanced glow on hover */
+   }
+    .main-head {
+      font-size: 2.8rem;
+      color: #0DA37C;
+      margin-bottom: 20px;
+    }
+    .metallic-text {
+  background: linear-gradient(100deg,#0DA37C, #FFFFFF, #048a66);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+    .highlight1 {
+      color: #F4CE00;
+      font-size: 40px;
+      padding-right: 5px;
+    }
+    .head2 {
+      font-size: 1.3rem;
+      color: #0DA37C;
+      margin-bottom: 3rem;
+    }
+    .highlight2 {
+      color: #F4CE00;
+      font-size: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .subheadings {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+      color: #F4CE00;
+      font-size: 1.5rem;
+    }
+    .metallic-text2 {
+  background: linear-gradient(90deg, #ffd700, #FFFFFF, #B8860B);
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  animation: metallic-shine 3s infinite linear;
+}
+
+    .sub-separator {
+      width: 2.5px;
+      height: 20px;
+      background-color: #0DA37C;
+        }
+    .logos {
+      display: flex;
+      justify-content: center;
+    }
+    .swiggy-logo, .zomato-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 3px;
+      margin-right: 1.5rem;
+      transition: transform 0.3s ease; 
+    }
+    .swiggy-logo:hover, .zomato-logo:hover {
+      transform: scale(1.2);
+    }
+    .metallic-border {
+     border: 2.5px solid transparent;
+     border-image: linear-gradient(45deg, #FFD700, #FFFFFF, #B8860B);
+     border-image-slice: 1;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .metallic-border:hover {
+     transform: scale(1.1);
+     box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.9);
+     }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 576px) {
+      .logo{
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
+      .main-head {
+        font-size: 1.5rem;
+      }
+      .highlight1 {
+        font-size: 25px;
+      }
+      .head2 {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .highlight2 {
+          display: none;
+        }
+      .swiggy-logo, .zomato-logo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+    <section class="section">
+        <div class="container">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="Aarganic-bowl-logo.jpg" alt="Logo">
+         </div>
+          <!-- Paragraph -->
+          <p class="main-head">
+            <span class="metallic-text">Organic</span><span class="highlight1">,</span>
+            <span class="metallic-text">Flavourful</span><span class="highlight1">,</span>
+            <span class="metallic-text">Ancient Millet bowls with great taste</span><span class="highlight1">.</span>
+          </p>          
+          <!-- Subheadings -->
+          <div class="subheadings">
+            <div class="subheading1 metallic-text2">Pulao’s</div>
+            <div class="sub-separator mx-3"></div>
+            <div class="subheading1 metallic-text2">Kichidi</div>
+            <div class="sub-separator mx-3"></div>
+            <div class="subheading1 metallic-text2">Sambar rice</div>
+            <div class="sub-separator mx-3"></div>
+            <div class="subheading1 metallic-text2">Curd rice</div>
+            <div class="sub-separator mx-3"></div>
+            <div class="subheading1 metallic-text2">Low ghee basmati pulaos</div>
+          </div>
+    
+          <!-- Call to action -->
+          <h5 class="head2">Your favorite flavors are just a tap away<span class="highlight2">—</span>  order now on</h5>
+          
+          <!-- Swiggy and Zomato Icons-->
+          <div class="logos">
+            <!-- Swiggy Link -->
+            <a href="https://www.swiggy.com/city/hyderabad" target="_blank" aria-label="Order on Swiggy">
+              <img src="Swiggy_logo.png" alt="Swiggy Logo" class="swiggy-logo metallic-border">
+            </a>
+            <!-- Zomato Link -->
+            <a href="https://www.zomato.com/hyderabad/restaurants?category=1" target="_blank">
+              <img src="Zomato_logo.png" alt="Zomato Logo" class="zomato-logo metallic-border">
+            </a>
+          </div>
+        </div>
+    </section>
+
+</body>
+</html>
